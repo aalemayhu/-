@@ -12,7 +12,7 @@
 #define       DIGIT_EIGHT     8
 #define       DIGIT_NINE      9
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *but_1;
 @property (weak, nonatomic) IBOutlet UIButton *but_2;

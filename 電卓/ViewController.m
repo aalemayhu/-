@@ -12,6 +12,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     shouldClear = false;
+    [_textField setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,5 +45,13 @@
     [_textField setText:textFieldText];
 }
 
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [textField resignFirstResponder];
+    
+    return true;
+}
 
 @end
