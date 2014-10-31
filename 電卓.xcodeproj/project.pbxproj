@@ -13,7 +13,9 @@
 		50A8A0F41A04027C00E0CDC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A8A0F21A04027C00E0CDC9 /* Main.storyboard */; };
 		50A8A0F61A04027C00E0CDC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50A8A0F51A04027C00E0CDC9 /* Images.xcassets */; };
 		50A8A0F91A04027C00E0CDC9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A8A0F71A04027C00E0CDC9 /* LaunchScreen.xib */; };
-		50A8A1051A04027C00E0CDC9 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A8A1041A04027C00E0CDC9 /* __Tests.m */; };
+		50A8A1101A0403B700E0CDC9 /* CalculatorParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A8A10F1A0403B700E0CDC9 /* CalculatorParsing.m */; };
+		50A8A1141A04040B00E0CDC9 /* CCCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A8A1131A04040B00E0CDC9 /* CCCalculator.m */; };
+		50A8A1161A04217800E0CDC9 /* Interface.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A8A1151A04217800E0CDC9 /* Interface.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,10 @@
 		50A8A0F81A04027C00E0CDC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		50A8A0FE1A04027C00E0CDC9 /* 電卓Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "電卓Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A8A1031A04027C00E0CDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50A8A1041A04027C00E0CDC9 /* __Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __Tests.m; sourceTree = "<group>"; };
+		50A8A10F1A0403B700E0CDC9 /* CalculatorParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorParsing.m; sourceTree = "<group>"; };
+		50A8A1121A04040B00E0CDC9 /* CCCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCalculator.h; sourceTree = "<group>"; };
+		50A8A1131A04040B00E0CDC9 /* CCCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCalculator.m; sourceTree = "<group>"; };
+		50A8A1151A04217800E0CDC9 /* Interface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Interface.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,7 @@
 		50A8A0E71A04027C00E0CDC9 /* 電卓 */ = {
 			isa = PBXGroup;
 			children = (
+				50A8A10E1A04035A00E0CDC9 /* Parsers */,
 				50A8A0EC1A04027C00E0CDC9 /* AppDelegate.h */,
 				50A8A0ED1A04027C00E0CDC9 /* AppDelegate.m */,
 				50A8A0EF1A04027C00E0CDC9 /* ViewController.h */,
@@ -105,7 +111,7 @@
 		50A8A1011A04027C00E0CDC9 /* 電卓Tests */ = {
 			isa = PBXGroup;
 			children = (
-				50A8A1041A04027C00E0CDC9 /* __Tests.m */,
+				50A8A1111A0403C600E0CDC9 /* Code */,
 				50A8A1021A04027C00E0CDC9 /* Supporting Files */,
 			);
 			path = "電卓Tests";
@@ -117,6 +123,24 @@
 				50A8A1031A04027C00E0CDC9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50A8A10E1A04035A00E0CDC9 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				50A8A1121A04040B00E0CDC9 /* CCCalculator.h */,
+				50A8A1131A04040B00E0CDC9 /* CCCalculator.m */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
+		50A8A1111A0403C600E0CDC9 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				50A8A10F1A0403B700E0CDC9 /* CalculatorParsing.m */,
+				50A8A1151A04217800E0CDC9 /* Interface.m */,
+			);
+			name = Code;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50A8A0F11A04027C00E0CDC9 /* ViewController.m in Sources */,
+				50A8A1141A04040B00E0CDC9 /* CCCalculator.m in Sources */,
 				50A8A0EE1A04027C00E0CDC9 /* AppDelegate.m in Sources */,
 				50A8A0EB1A04027C00E0CDC9 /* main.m in Sources */,
 			);
@@ -229,7 +254,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50A8A1051A04027C00E0CDC9 /* __Tests.m in Sources */,
+				50A8A1101A0403B700E0CDC9 /* CalculatorParsing.m in Sources */,
+				50A8A1161A04217800E0CDC9 /* Interface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
