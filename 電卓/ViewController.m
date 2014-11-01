@@ -20,7 +20,7 @@
 }
 
 - (IBAction)buttonPressed:(UIButton *)sender {
-
+    
     NSString *textFieldText;
     
     if (shouldClear) {
@@ -30,9 +30,14 @@
     
     switch (sender.tag) {
         case ADD:
-            // TODO: Handle multiple ADD
+        {            
+            if ([[[self textField] text] rangeOfString:@"+"].length > 0) {
+                return;
+            }
+            
             textFieldText = [NSString stringWithFormat:@"%@+", [[self textField] text]];
             break;
+        }
         case ANSWER:
             textFieldText = [CCCalculator resultsFor:[[self textField] text]];
             shouldClear = !shouldClear;
@@ -41,7 +46,7 @@
             textFieldText = [NSString stringWithFormat:@"%@%lu", [[self textField] text], sender.tag];
             break;
     }
-        
+    
     [_textField setText:textFieldText];
 }
 

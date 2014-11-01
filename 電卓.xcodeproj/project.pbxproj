@@ -440,6 +440,7 @@
 				50A8A10A1A04027C00E0CDC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50A8A10B1A04027C00E0CDC9 /* Build configuration list for PBXNativeTarget "電卓Tests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +449,7 @@
 				50A8A10D1A04027C00E0CDC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -57,14 +57,18 @@
     [[vc answer_but] sendActionsForControlEvents:UIControlEventTouchUpInside];
     textFieldExpectedText = @"13";
     XCTAssert([[[vc textField] text] isEqualToString:textFieldExpectedText], @"Wrong answer!");
+}
 
-    
+-(void) testPreventInvalidOperation {
+
     // Let us try pressing add multiple times.
     [[vc but_1] sendActionsForControlEvents:UIControlEventTouchUpInside];
     [[vc add_but] sendActionsForControlEvents:UIControlEventTouchUpInside];
     [[vc but_5] sendActionsForControlEvents:UIControlEventTouchUpInside];
     [[vc add_but] sendActionsForControlEvents:UIControlEventTouchUpInside];
     [[vc add_but] sendActionsForControlEvents:UIControlEventTouchUpInside];
+    
+    XCTAssert([[[vc textField] text] rangeOfString:@"+"].location != NSNotFound, @"Missing add");
     
     [[vc answer_but] sendActionsForControlEvents:UIControlEventTouchUpInside];
     textFieldExpectedText = @"6";
